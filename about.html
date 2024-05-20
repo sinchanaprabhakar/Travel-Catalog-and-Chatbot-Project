@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Travel </title>
+        <link rel="stylesheet" type="text/css" href="about.css">
+    </head>
+    <body>
+        <h1><u>ABOUT US</u></h1>
+        <p>
+            Traveling is more than visiting places and taking pictures.<br>
+            It brings out new ideas and perspectives,<br>
+            and travel is important for showcasing an actual investment in yourself.<br>
+            Here are the top reasons why traveling is important.<br>
+            In today's data-driven world, the world is (literally) at the tips of our fingers.<br>
+            But while technology allows us to stay connected, it is also more isolating than ever.<br>
+            With a 24/7 news cycle that often paints a dreary scene,<br> 
+            it can be hard to challenge the status quo and understand the world for what it truly is.<br>
+            One of the best ways to overcome this barrier is to travel as much as possible.<br>
+            Traveling, as they say, is food for the soul.<br>
+            While you unwind and explore the destination, traveling offers much more.<br>
+            You get to immerse yourself in the culture, cuisine, and nature of every place you visit.<br>
+            This provides new ideas and perspectives on different subjects as you learn more about the place (and maybe even yourself).
+        </p>
+        <div class="your-target-container-id"></div>
+        <a href="#" onclick="openChatbotInFrame()">
+        <img src="https://www.shutterstock.com/image-vector/chat-bot-logo-design-concept-600nw-1938811039.jpg" alt="Chatbot Icon" width="50" height="50" id="chatbot-icon">
+        </a>
+        <script>
+            function openChatbotInFrame() {
+                // Create a new element (iframe) to hold the chatbot
+                var chatbotFrame = document.createElement("iframe");
+                chatbotFrame.src = "chatbot.html";
+                chatbotFrame.id = "chatbotFrame"; // Optional: set an ID for styling (see below)
+                chatbotFrame.style.width = "400px";
+                chatbotFrame.style.height = "300px";
+                chatbotFrame.style.border = "none"; // Optional: remove border
+
+                // Find a suitable location on the page to insert the iframe
+                var targetContainer = document.getElementById("your-target-container-id"); // Replace with actual ID
+                if (targetContainer) {
+                    targetContainer.appendChild(chatbotFrame);
+                } else {
+                    // Fallback if target container not found (append to body)
+                    document.body.appendChild(chatbotFrame);
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("images/cities.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-backface-visibility: hidden;
+    margin: 0;
+    padding: 0;
+}
+.main {
+    text-align: center;
+    padding: 20px;
+    background-color: #59D5E0;
+    color:blue;
+}
+.main h1 {
+    margin-bottom: 10px;
+}
+.main p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+.cities {
+    display: inline-block;
+    width: 44%;
+    margin: 80px 2.5%;
+    background-color:rgb(196, 235, 236);
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    text-align: center;
+    overflow: hidden;
+}
+.cities img {
+    padding-top: 20px;
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #ccc;
+}
+.cities h2 {
+    color: #333;
+    margin: 10px 0;
+}
+.my-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color:#edae1d;
+    color: black;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.my-button:hover {
+    background-color: white;
+}
+@media screen and (max-width: 800px) {
+    .cities {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+/* chatbot styling */
+#chatbot-icon {
+    position: fixed;
+    border-radius: 30px;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 100; /* Ensure the icon stays on top of other elements */
+}
+#chatbot-content {
+    position: fixed; /* Set fixed position for chatbot content */
+    top: 0; /* Initially position it off-screen */
+    right: 0;
+    display: none;
+    width: 50px; /* Match icon size */
+    height: 50px; /* Match icon size */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Semi-transparent background */
+    border: 1px solid #ccc; /* Optional: Border */
+    padding: 5px; /* Optional: Inner padding */
+    z-index: 101; /* Ensure it stays above other elements */
+}
+#chatbot-content:hover {
+    display: block; /* Display content on hover over icon */
+}

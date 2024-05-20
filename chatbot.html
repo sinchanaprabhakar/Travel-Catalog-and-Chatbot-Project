@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>Chatbot</title>
+    <style>
+      body{
+        font-family: 'Times New Roman', Times, serif;
+        background-image: url("images/chatbot.png");
+        background-size: 400px 400px;
+      }
+      .ques,.text{
+        color:yellow;
+        font-size:20px;
+      }
+      .ques-box{
+        background-color: rgb(114, 46, 231);
+        width:200px;
+        border-radius: 20px;
+        padding-left:10px;
+        padding-right:7px;
+      }
+      input{
+        font-size:18px;
+      }
+      button{
+        font-size:18px;
+        background-color:rgb(49, 49, 173);
+        border:none;
+        color:yellow;
+        cursor: pointer;
+        padding-left:12px;
+        padding-right:12px;
+        padding-top:5px;
+        padding-bottom:5px;
+        border-radius: 20px;
+      }
+      button:hover{
+        background-color: white;
+        color:rgb(49, 49, 173);
+      }
+      .op-box{
+        background-color:  rgb(114, 46, 231);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ques-box"><p class="ques">How may I help you?</div>
+    <form id="promptForm">
+      <input type="text" id="userInput" placeholder="Enter your question">
+      <button type="submit">Submit</button>
+    </form>
+    <div class="op-box">
+      <p class=" text op" style="overflow: hidden; text-overflow: ellipsis; white-space:wrap"></p>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script type="module">
+      import { GoogleGenerativeAI } from "@google/generative-ai";
+
+      // Fetch your API_KEY
+      const API_KEY = "AIzaSyCxRIOjn3ClyVe8UEzNECl06P4FUh3CTYo";
+
+      // Access your API key (see "Set up your API key" above)
+      const genAI = new GoogleGenerativeAI(API_KEY);
+
+      // ...
+      function handleSubmit(event) {
+      event.preventDefault(); // Prevent default form submission behavior
+      const prompt = document.getElementById("userInput").value;
+      run(prompt); // Call the run function with the user input
+    }
+
+      async function run() {
+      // For text-only input, use the gemini-pro model
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest"});
+
+      const prompt = document.querySelector('input').value;
+
+      const result = await model.generateContent(prompt);
+      const response = await result.response;
+      const text = response.text();
+      //console.log(text);
+      const formattedText = text
+        .replace(/[#*_]/g, "")
+        .replace(/\.([^\s.])/g, ". \n$1"); // Insert newline after full stop (.) followed by non-space/dot character
+      document.querySelector('.op').innerHTML=formattedText;
+    }
+
+    const form = document.getElementById("promptForm");
+    form.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
+</html>

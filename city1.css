@@ -1,0 +1,75 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+.intro {
+    background-color:#C65BCF;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.intro h1 {
+    text-align: center;
+    color: white;
+}
+.bold {
+   font-weight: bold;
+}
+.intro p {
+    text-align: center;
+    color: black;
+    line-height: 1.5;
+}
+.places-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Gap between items */
+}
+.place {
+    background-color:#e4e890;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px; /* Add margin between each block */
+}
+.place h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+.place p {
+    color:black;
+    line-height: 1.5;
+}
+img {
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+}
+/* chatbot styling */
+#chatbot-icon {
+    position: fixed;
+    border-radius: 30px;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 100; /* Ensure the icon stays on top of other elements */
+}
+#chatbot-content {
+    position: fixed; /* Set fixed position for chatbot content */
+    top: 0; /* Initially position it off-screen */
+    right: 0;
+    display: none;
+    width: 50px; /* Match icon size */
+    height: 50px; /* Match icon size */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Semi-transparent background */
+    border: 1px solid #ccc; /* Optional: Border */
+    padding: 5px; /* Optional: Inner padding */
+    z-index: 101; /* Ensure it stays above other elements */
+}
+#chatbot-content:hover {
+    display: block; /* Display content on hover over icon */
+}

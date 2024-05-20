@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Mysuru</title>
+    <link rel="stylesheet" type="text/css" href="city1.css">
+    </head>
+    <body>
+        <div class="intro"><h1>MYSURU</h1>
+            <p>
+            <span class="bold">Mysuru is a city in south-central Karnataka state, southern India. It lies to the northwest of Chamundi Hills and midway between the Kaveri (Cauvery) and Kabini (Kabbani) rivers on the undulating deccan plateau at an elevation of 2,525 feet (770 metres). The land surrounding the city is characterized by rain-filled shallow depressions (tanks).
+            </span></p>
+        </div>
+        <div class="place">
+            <h2>Chamundi Hills</h2>
+            <img src="images/img1.jpg" style="width: 300px;height: 200px;" alt="Chamundi Hills"/>
+            <p>
+                In India, just as a person’s name usually has a symbolic meaning, names given to places also have a meaning behind them. Chamundi Hills in Karnataka is named after the Goddess Chamundeshwari.
+                The hills lie at a height of about 1000 meters above sea level and is 13 km east of Mysore. The Chamundeshwari Temple dedicated to the Goddess after whom the hills are named is the highlight of this place.
+            </p>
+        </div>
+        <div class="place">
+            <h2>Mysore Palace</h2>
+            <img src="images/img2.jpg" style="width: 300px;height: 200px;" alt="Mysore Palace"/>
+            <p>
+                Mysore Palace also known as Amba Vilas Palace located at the heart of Mysore city is the most prominent tourist destination of Mysore that attracts millions of visitors round the year. This historical palace housed within the Old Fort facing the Chamunda Hills stands as the official residence of the Wadiyar dynasty who ruled the Kingdom of Mysore from 1399 to 1950.
+            </p>
+        </div>
+        <div class="place">
+            <h2>Sri Chamarajendra Zoological Gardens</h2>
+            <img src="images/img3.jpg" style="width: 300px;height: 200px;" alt="Sri Chamarajendra Zoological Gardens"/>
+            <p>
+                Nestled at the base of the Chamundi Hills, Mysore Zoo awaits your discovery. It’s not just a place to see animals; it’s a sanctuary where conservation meets education, offering a unique glimpse into the wild.
+                As you wander through the lush greenery, you’ll encounter a tapestry of biodiversity. Mysore Zoo’s commitment to animal care and environmental stewardship has made it a must-visit destination for wildlife enthusiasts.
+            </p>
+        </div>
+        <div class="place">
+            <h2>Brindavan Gardens</h2>
+            <img src="images/img4.jpg" style="width: 300px;height: 200px;" alt="Brindavan Gardens"/>
+            <p>
+                Brindavan Gardens is at the bottom of the Krishnaraja Sagara Dam (KRS), across the river Cauvery. Modelled on the Shalimar Gardens of Kashmir, the garden entices visitors with its lush green lawns, terraces, flower beds, topiary and multihued fountains. Today, the Brindavan Gardens is world-famous for its ethereal beauty and grandeur.
+            </p>
+        </div>
+        <div class="place">
+            <h2>Somanathapura Temple</h2>
+            <img src="images/img5.jpg" style="width: 300px;height: 200px;" alt="Somanathapura Temple"/>
+            <p>
+                The Somanathapura Temple is a 13th-century Hindu temple located in Somanathapura, a small village in the state of Karnataka, India. The temple is dedicated to the God Chennakeshava, a form of the Hindu God Vishnu. It is known for its intricate and detailed architecture and is considered to be one of the finest examples of Hoysala architecture.
+            </p>
+        </div>
+        <div class="place">
+            <h2>Jaganmohan Palace</h2>
+            <img src="images/img6.jpg" style="width: 300px;height: 200px;" alt="Jaganmohan Palace"/>
+            <p>
+                The Jaganmohan Palace was commissioned in 1861 by the then ruler of Mysore, Krishnaraja Wodeyar III, as an alternative retreat for the royal family. The construction was a response to the ongoing renovations at the main Mysuru Palace, which had suffered extensive damage due to a fire. Designed by architects of repute, the palace is a splendid example of traditional Indian architecture blended with Gothic, Hindu, Mughal, and Rajput styles.
+            </p>
+        </div>
+        <div class="place">
+            <h2>Karanji Lake</h2>
+            <img src="images/img7.jpg" style="width: 300px;height: 200px;" alt="Karanji Lake"/>
+            <p>
+                Karanji Lake, also known as the fountain lake, is a popular picnic spot. Visitors are allowed to bring packed food, and there is a coffee shop as well. It is a beautiful place to explore the different species of birds as the lake exhibits as many as 147 species including herons, Asian openbill storks, cormorant, grey pelican, etc.
+            </p>
+        </div>
+        <div class="your-target-container-id"></div>
+        <a href="#" onclick="openChatbotInFrame()">
+            <img src="https://www.shutterstock.com/image-vector/chat-bot-logo-design-concept-600nw-1938811039.jpg" alt="Chatbot Icon" width="50" height="50" id="chatbot-icon">
+        </a>
+        <script>
+            function openChatbotInFrame() {
+                // Create a new element (iframe) to hold the chatbot
+                var chatbotFrame = document.createElement("iframe");
+                chatbotFrame.src = "chatbot.html";
+                chatbotFrame.id = "chatbotFrame"; // Optional: set an ID for styling (see below)
+                chatbotFrame.style.width = "400px";
+                chatbotFrame.style.height = "300px";
+                chatbotFrame.style.border = "none"; // Optional: remove border
+
+                // Find a suitable location on the page to insert the iframe
+                var targetContainer = document.getElementById("your-target-container-id"); // Replace with actual ID
+                if (targetContainer) {
+                    targetContainer.appendChild(chatbotFrame);
+                } else {
+                    // Fallback if target container not found (append to body)
+                    document.body.appendChild(chatbotFrame);
+                }
+            }
+        </script>
+    </body>
+</html>

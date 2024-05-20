@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Cities Page</title>
+        <link rel="stylesheet" type="text/css" href="cities.css">
+    </head>
+    <body>
+        <div class="main">
+            <h1>Explore Cities</h1>
+                <p>Traveling broadens horizons, awakening the soul to new experiences. It's a journey of discovery, where cultures intertwine and memories are made. With each step, the world unfolds its wonders, inviting exploration beyond familiar shores. In the tapestry of travel, every destination adds a vibrant thread to the fabric of life.</p>
+        </div>
+        <div class="cities">
+            <img src="images/mysuru.jpg" style="width: 500px;height: 200px;border-radius: 100px;" alt="Mysuru">
+            <h2>Mysuru</h2>
+            <a href="city1.html">
+                <button class="my-button">Explore</button>
+            </a>
+        </div>
+        <div class="cities">
+            <img src="images/bangalore.jpg" style="width: 500px;height: 200px;border-radius: 100px;" alt="Bengaluru">
+            <h2>Bengaluru</h2>
+            <a href="city2.html">
+                <button class="my-button">Explore</button>
+            </a>
+        </div>
+        <div class="your-target-container-id"></div>
+        <a href="#" onclick="openChatbotInFrame()">
+        <img src="https://www.shutterstock.com/image-vector/chat-bot-logo-design-concept-600nw-1938811039.jpg" alt="Chatbot Icon" width="50" height="50" id="chatbot-icon">
+        </a>
+        <script>
+            function openChatbotInFrame() {
+                // Create a new element (iframe) to hold the chatbot
+                var chatbotFrame = document.createElement("iframe");
+                chatbotFrame.src = "chatbot.html";
+                chatbotFrame.id = "chatbotFrame"; // Optional: set an ID for styling (see below)
+                chatbotFrame.style.width = "400px";
+                chatbotFrame.style.height = "300px";
+                chatbotFrame.style.border = "none"; // Optional: remove border
+
+                // Find a suitable location on the page to insert the iframe
+                var targetContainer = document.getElementById("your-target-container-id"); // Replace with actual ID
+                if (targetContainer) {
+                    targetContainer.appendChild(chatbotFrame);
+                } else {
+                    // Fallback if target container not found (append to body)
+                    document.body.appendChild(chatbotFrame);
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(223, 204, 238);
+    background-image:url("images/about.jpg");
+    background-repeat: no-repeat;
+    background-size:600px 588px;
+}
+h1 {
+    text-align: center;
+    color: #CB9D06; 
+    font-weight: bolder;
+}
+p {
+    padding-left: 590px;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 20px;
+    line-height: 1.6;
+    color: purple;
+}
+/* chatbot styling */
+#chatbot-icon {
+    position: fixed;
+    border-radius: 30px;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 100; /* Ensure the icon stays on top of other elements */
+}
+#chatbot-content {
+    position: fixed; /* Set fixed position for chatbot content */
+    top: 0; /* Initially position it off-screen */
+    right: 0;
+    display: none;
+    width: 50px; /* Match icon size */
+    height: 50px; /* Match icon size */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Semi-transparent background */
+    border: 1px solid #ccc; /* Optional: Border */
+    padding: 5px; /* Optional: Inner padding */
+    z-index: 101; /* Ensure it stays above other elements */
+}
+#chatbot-content:hover {
+    display: block; /* Display content on hover over icon */
+}

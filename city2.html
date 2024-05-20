@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Bengaluru</title>
+    <link rel="stylesheet" type="text/css" href="city1.css">
+    </head>
+    <body>
+        <div class="intro"><h1>BENGALURU</h1>
+        <p>
+        <span class="bold">Bengaluru has pleasant summers and mild winters. Summer temperatures average in the low to mid-90s F (about 34 °C), and winter temperatures rarely drop below 60 °F (16 °C). The city receives about 36 inches (914 mm) of annual rainfall, which has been inadequate as a water supply for its increasing population and industry. Most of the city’s water comes from the Kaveri (Cauvery) River, about 45 miles (70 km) to the south.
+        </span></p>
+        </div>
+        <div class="place">
+        <h2>Wonderla Amusement Park</h2>
+        <img src="images/img8.jpg" style="width: 300px;height: 200px;" alt="Wonderla Amusement Park"/>
+        <p>
+            Fun from the get-go is what we like and that's exactly what we deliver. The moment you step in, you will feel like you're in a whole other dimension. It's almost like paradise - all laughter, merrymaking and thrills! Get your dopamine level checker, coz it's gonna be FUN all day!
+        </p>
+        </div>
+        <div class="place">
+            <h2>Lalbagh</h2>
+            <img src="images/img9.jpg" style="width: 300px;height: 200px;" alt="Lalbagh"/>
+            <p>
+                Lalbagh Botanical Garden is located in Bangalore and is nationally and internationally renowned centre for botanical artwork, scientific study of plants and also conservation of plants. A heaven for all nature lovers, Lal Bagh covers an area 240 acres in the heart of the city and has nearly 1,854 species of plants. It was commissioned by Hyder Ali in 1760 and completed by his son Tipu Sultan.  
+            </p>
+        </div>
+        <div class="place">
+            <h2>Bannerghatta National Park</h2>
+            <img src="images/img10.jpg" style="width: 300px;height: 200px;" alt="Bannerghatta National Park"/>
+            <p>
+                Located 22 km away from Bangalore, the Bannerghatta National Park is a sanctuary for a large variety of flora and fauna. Spread over a massive area of around 104.27 sq. km, this national park was established in the year 1971. The park itself has a number of establishments within its confines, which includes the country's first butterfly park as well.
+            </p>
+        </div>
+        <div class="place">
+            <h2>Bangalore Palace</h2>
+            <img src="images/img11.jpg" style="width: 300px;height: 200px;" alt="Bangalore Palace"/>
+            <p>
+                An epitome of great architecture and beauty, the Majestic Bangalore Palace preserves in it the spice of old regal opulence. Currently the central attraction in Bangalore, the palace was built in the year 1878. Chamarajendra Wadiyar's British Guardians bought the original property in 1873 from the principal of Bangalore Central High School, Rev, J Garret, from his funds. The palace is extraordinarily vast and spread across 45,000 square feet.
+            </p>
+        </div>
+        <div class="place">
+            <h2>Cubbon Park</h2>
+            <img src="images/img12.jpg" style="width: 300px;height: 200px;" alt="Cubbon Park"/>
+            <p>
+                Spread over an area of 300 acres, Cubbon Park in the city of Bangalore is a major sightseeing attraction rich in green foliage. It is a green belt region of the city and is an ideal place for nature lovers and those seeking a calm atmosphere. Having been laid down by Lord Cubbon, the park is named so in his honour. It is home to more than 6,000 trees that support a vibrant ecosystem.
+            </p>
+        </div>
+        <div class="place">
+            <h2>ISKCON Temple</h2>
+            <img src="images/img13.jpg" style="width: 300px;height: 200px;" alt="ISKCON Temple"/>
+            <p>
+                ISKCON temple Bangalore is a part of a charitable society with the aim of propagating Krishna Consciousness through the teachings of the Bhagavad Gita. The society was registered in the year 1978 under the Karnataka Societies Registration Act, 1960 and became operational in 1987. The same year, the leaders of the society approached the Bangalore Development Authority for the allotment of land to construct the temple. A seven-acre hillock with a huge rock in the midst of it was allotted to the ISKCON temple authorities on August 3, 1988. Since the site wasn't fit for construction, a temporary temple premise was arranged there.
+            </p>
+        </div>
+        <div class="your-target-container-id"></div>
+        <a href="#" onclick="openChatbotInFrame()">
+            <img src="https://www.shutterstock.com/image-vector/chat-bot-logo-design-concept-600nw-1938811039.jpg" alt="Chatbot Icon" width="50" height="50" id="chatbot-icon">
+        </a>
+        <script>
+            function openChatbotInFrame() {
+                // Create a new element (iframe) to hold the chatbot
+                var chatbotFrame = document.createElement("iframe");
+                chatbotFrame.src = "chatbot.html";
+                chatbotFrame.id = "chatbotFrame"; // Optional: set an ID for styling (see below)
+                chatbotFrame.style.width = "400px";
+                chatbotFrame.style.height = "300px";
+                chatbotFrame.style.border = "none"; // Optional: remove border
+
+                // Find a suitable location on the page to insert the iframe
+                var targetContainer = document.getElementById("your-target-container-id"); // Replace with actual ID
+                if (targetContainer) {
+                    targetContainer.appendChild(chatbotFrame);
+                } else {
+                    // Fallback if target container not found (append to body)
+                    document.body.appendChild(chatbotFrame);
+                }
+            }
+        </script>
+    </body>
+</html>
